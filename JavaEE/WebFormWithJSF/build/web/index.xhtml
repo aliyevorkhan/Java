@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>ANKET</title>
+    </h:head>
+    <h:body>
+         <h:form>
+            <h:panelGrid columns="2">
+                <h:outputText value="Isim soyisim giriniz:"/>
+                <h:inputText value="#{m.isimSoyisim}"/>
+                
+                <h:outputText value="Cinsiyyetiniz nedir?:"/>
+                <h:selectManyCheckbox value="#{m.cinsiyyet}">
+                    <f:selectItem itemLabel="Kadin" itemValue="Kadin"/>
+                    <f:selectItem itemLabel="Erkek" itemValue="Erkek"/>                    
+                </h:selectManyCheckbox>
+                
+                <h:outputText value="Ehliyetiniz var mi?:"/>
+                <h:selectOneRadio value="#{m.ehliyetVarMi}">
+                    <f:selectItem itemLabel="Evet" itemValue="Evet"/>
+                    <f:selectItem itemLabel="Hayir" itemValue="Hayir"/>    
+                </h:selectOneRadio>
+                
+                <h:outputText value="Adres bilgilerinizi giriniz:"/>
+                <h:inputTextarea value="#{m.adres}"/>
+                
+                <h:outputText value="Il seciniz:"/>
+                <h:selectOneMenu value="#{m.il}">
+                    <f:selectItem itemLabel="Baku" itemValue="Baku"/>
+                    <f:selectItem itemLabel="Sumqayit" itemValue="Sumqayit"/>                    
+                </h:selectOneMenu>
+                
+                <h:outputText value="Parola giriniz:"/>
+                <h:inputSecret value="#{m.parola}"/>   
+                
+                <h:outputText value="Buton ile verilerin gonderimi"/>
+                <h:commandButton value="GONDER"/>
+            
+                <h:outputText value="Bilgilerin dogrulugunu onayliyor musunuz?"/>
+                <h:selectBooleanCheckbox value="#{m.kabulEdildiMi}"/>
+                
+             
+            </h:panelGrid> 
+            
+            
+            <h:panelGrid columns="1">
+                <h2>DIKKAT!</h2>
+                <h:outputText value="#{m.mesaj}" style="color: red"/>
+                <h:outputText value="#{m.isimSoyisim}"/>
+                <h:outputText value="#{m.cinsiyet}"/>
+                <h:outputText value="#{m.ehliyetVarMi}"/>
+                <h:outputText value="#{m.il}"/>
+                <h:outputText value="#{m.adres}"/>
+                <h:outputText value="#{m.parola}"/>                         
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+

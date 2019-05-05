@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:dataTable var="e" value="#{UserCtrl.employees}">
+                <h:column>
+                    <f:facet name="header" >Name</f:facet>
+                    <h:outputText value="#{e.name}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header" >Surname</f:facet>
+                    <h:outputText value="#{e.surname}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header" >Birth Year</f:facet>
+                    <h:outputText value="#{e.birthYear}"/>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header" >Action</f:facet>
+                    <h:commandButton value="select" action="#{UserCtrl.select(e)}"/>
+                </h:column>
+                
+            </h:dataTable>
+            
+            <hr/>
+            
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td><h:inputText value="#{UserCtrl.selectedEmployee.name}"/></td>
+                </tr>
+                <tr>
+                    <td>Surname</td>
+                    <td><h:inputText value="#{UserCtrl.selectedEmployee.surname}"/></td>
+                </tr>
+                <tr>
+                    <td>Birth Year</td>
+                    <td><h:inputText value="#{UserCtrl.selectedEmployee.birthYear}"/></td>
+                </tr>
+                <tr>
+                    <td><h:commandButton action="#{UserCtrl.delete()}" value="Delete"/></td>
+                    <td><h:commandButton action="#{UserCtrl.update()}" value="Update"/></td>
+                </tr>
+                <tr>
+                    <td><h:commandButton action="#{UserCtrl.add()}" value="Add"/></td>
+                    <td>
+                        
+                    </td>
+                </tr>
+            </table>
+        </h:form>
+    </h:body>
+</html>
+

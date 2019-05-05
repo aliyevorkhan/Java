@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://DefaultNamespace" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://DefaultNamespace" xmlns:intf="http://DefaultNamespace" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://DefaultNamespace" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="cikar">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:int"/>
+      <element name="y" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="cikarResponse">
+    <complexType>
+     <sequence>
+      <element name="cikarReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="carp">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:int"/>
+      <element name="y" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="carpResponse">
+    <complexType>
+     <sequence>
+      <element name="carpReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="bol">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:int"/>
+      <element name="y" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="bolResponse">
+    <complexType>
+     <sequence>
+      <element name="bolReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="topla">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:int"/>
+      <element name="y" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="toplaResponse">
+    <complexType>
+     <sequence>
+      <element name="toplaReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="boyuk">
+    <complexType>
+     <sequence>
+      <element name="x" type="xsd:int"/>
+      <element name="y" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="boyukResponse">
+    <complexType>
+     <sequence>
+      <element name="boyukReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="cikarRequest">
+
+      <wsdl:part element="impl:cikar" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="toplaRequest">
+
+      <wsdl:part element="impl:topla" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="boyukResponse">
+
+      <wsdl:part element="impl:boyukResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="bolResponse">
+
+      <wsdl:part element="impl:bolResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="toplaResponse">
+
+      <wsdl:part element="impl:toplaResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="boyukRequest">
+
+      <wsdl:part element="impl:boyuk" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="bolRequest">
+
+      <wsdl:part element="impl:bol" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="carpResponse">
+
+      <wsdl:part element="impl:carpResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="cikarResponse">
+
+      <wsdl:part element="impl:cikarResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="carpRequest">
+
+      <wsdl:part element="impl:carp" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="hesaplama">
+
+      <wsdl:operation name="cikar">
+
+         <wsdl:input message="impl:cikarRequest" name="cikarRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:cikarResponse" name="cikarResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="carp">
+
+         <wsdl:input message="impl:carpRequest" name="carpRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:carpResponse" name="carpResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="bol">
+
+         <wsdl:input message="impl:bolRequest" name="bolRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:bolResponse" name="bolResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="topla">
+
+         <wsdl:input message="impl:toplaRequest" name="toplaRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:toplaResponse" name="toplaResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="boyuk">
+
+         <wsdl:input message="impl:boyukRequest" name="boyukRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:boyukResponse" name="boyukResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="hesaplamaSoapBinding" type="impl:hesaplama">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="cikar">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="cikarRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="cikarResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="carp">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="carpRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="carpResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="bol">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="bolRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="bolResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="topla">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="toplaRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="toplaResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="boyuk">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="boyukRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="boyukResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="hesaplamaService">
+
+      <wsdl:port binding="impl:hesaplamaSoapBinding" name="hesaplama">
+
+         <wsdlsoap:address location="http://localhost:8080/WebServiceTest/services/hesaplama"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
